@@ -1,0 +1,19 @@
+# --- Big stuff we NEVER want in git ---
+backups/
+*.zip
+*.mp3
+*.wav
+*.edf
+*.csv
+*.pdf
+*.doc
+*.docx
+
+# Python noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS junk
+.DS_Store
+

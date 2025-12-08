@@ -1,0 +1,75 @@
+{
+  "brainFlowFilter": "BANDPASS",
+  "filterChannelSelect": "CUSTOM_CHANNELS",
+  "globalEnvFilter": "SIXTY",
+  "masterBandStopFilterActive": "OFF",
+  "masterBandStopStartFreq": 58.0,
+  "masterBandStopStopFreq": 62.0,
+  "masterBandStopFilterType": "BUTTERWORTH",
+  "masterBandStopFilterOrder": "FOUR",
+  "bandStopFilterActive": [
+    "OFF",
+    "OFF",
+    "OFF",
+    "OFF"
+  ],
+  "bandStopStartFreq": [
+    58.0,
+    58.0,
+    58.0,
+    58.0
+  ],
+  "bandStopStopFreq": [
+    62.0,
+    62.0,
+    62.0,
+    62.0
+  ],
+  "bandStopFilterType": [
+    "BUTTERWORTH",
+    "BUTTERWORTH",
+    "BUTTERWORTH",
+    "BUTTERWORTH"
+  ],
+  "bandStopFilterOrder": [
+    "FOUR",
+    "FOUR",
+    "FOUR",
+    "FOUR"
+  ],
+  "masterBandPassFilterActive": "ON",
+  "masterBandPassStartFreq": 8.0,
+  "masterBandPassStopFreq": 13.0,
+  "masterBandPassFilterType": "CHEBYSHEV",
+  "masterBandPassFilterOrder": "FOUR",
+  "bandPassFilterActive": [
+    "ON",
+    "ON",
+    "ON",
+    "ON"
+  ],
+  "bandPassStartFreq": [
+    8.0,
+    8.0,
+    8.0,
+    8.0
+  ],
+  "bandPassStopFreq": [
+    13.0,
+    13.0,
+    13.0,
+    13.0
+  ],
+  "bandPassFilterType": [
+    "CHEBYSHEV",
+    "CHEBYSHEV",
+    "CHEBYSHEV",
+    "CHEBYSHEV"
+  ],
+  "bandPassFilterOrder": [
+    "FOUR",
+    "FOUR",
+    "FOUR",
+    "FOUR"
+  ]
+}
