@@ -1,4 +1,4 @@
-# --- Big stuff we NEVER want in git ---
+# Never track backups or large data
 backups/
 *.zip
 *.mp3
@@ -16,4 +16,3 @@ __pycache__/
 
 # macOS junk
 .DS_Store
-
