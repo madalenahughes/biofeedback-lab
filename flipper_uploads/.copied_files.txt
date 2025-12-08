@@ -1,0 +1,4 @@
+._test copy.txt
+._test.txt
+test copy.txt
+test.txt

@@ -16,3 +16,4 @@ __pycache__/
 
 # macOS junk
 .DS_Store
+.tmp.driveupload/
