@@ -6,7 +6,6 @@ REPO_DIR="$HOME/Desktop/biofeedback"
 # Hostnames / IPs for your Pis
 PIS=(
   "madalenahughes@pitop.local"    # Pi 3 in the Ceed
-  "madalenahughes@raspberrypi.local"    # Pi 4 lab brain
 )
 
 # ==== SCRIPT ====
