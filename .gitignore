@@ -1,5 +1,10 @@
-# Never track backups or large data
-backups/
+# Ignore all backups by default
+backups/*
+# But keep the latest code snapshot
+!backups/pi_backup_latest/
+!backups/pi_backup_latest/**
+
+# Big / binary / data we never want in git
 *.zip
 *.mp3
 *.wav
@@ -14,6 +19,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# macOS junk
+# macOS junk / temp
 .DS_Store
 .tmp.driveupload/
+

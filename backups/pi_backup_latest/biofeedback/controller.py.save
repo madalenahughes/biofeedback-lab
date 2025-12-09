@@ -1,0 +1,34 @@
+            - sleep a bit
+        - When playback ends (EOF), exit naturally.
+    """
+    engine = AudioEngine()
+    params = AudioParams()
+
+    print("[controller] Starting full-track playback; controller will exit at EOF.")
+    engine.play()
+
+    # Wait until playback really starts
+    while not engine.is_playing():
+        state = engine.player.get_state()
+        if state in (vlc.State.Ended, vlc.State.Error, vlc.State.Stopped):
+            print("[controller] Audio ended or failed before start. Exiting.")
+            return
+        time.sleep(0.1)
+
+    print("[controller] Audio is playing. Entering control loop.")
+
+    # Main control loop
+    while engine.is_playing():
+        rmssd_z = get_current_rmssd_z()
+        faa = None  # placeholder; wire in FAA later if you want
+
+        params = update_audio_parameters(rmssd_z, faa, params)
+        engine.apply_params(params.tempo, params.pitch, params.volume)
+
+        time.sleep(update_interval)
+
+    print("[controller] Audio finished (EOF). Exiting controller.")
+
+
+if __name__ == "__main__":
+    main_loop()
