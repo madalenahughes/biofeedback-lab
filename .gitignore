@@ -1,25 +1,16 @@
-# Ignore all backups by default
-backups/*
-# But keep the latest code snapshot
-!backups/pi_backup_latest/
-!backups/pi_backup_latest/**
+# Ignore everything by default
+*
 
-# Big / binary / data we never want in git
-*.zip
-*.mp3
-*.wav
-*.edf
-*.csv
-*.pdf
-*.doc
-*.docx
+# Keep git + core scripts
+!.gitignore
+!deploy.sh
+!flipper_menu.sh
 
-# Python noise
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
+# Keep the backup script (but NOT backup contents)
+!backups/
+!backups/latest_backup.sh
 
-# macOS junk / temp
-.DS_Store
-.tmp.driveupload/
+# Keep only the code snapshot folder
+!code/
+!code/**
 
