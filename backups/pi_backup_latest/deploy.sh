@@ -40,6 +40,8 @@ if [ -z "$CHANGES" ]; then
   osascript -e 'display notification "No changes to deploy (repo already up to date)." with title "Biofeedback Deploy"' 2>/dev/null || true
   osascript -e 'beep 1' 2>/dev/null || true
   echo ">>> Deploy finished: nothing to commit."
+  osascript -e 'display notification "No changes to deploy." with title "Biofeedback Deploy"' 2>/dev/null || true
+  osascript -e 'beep 1' 2>/dev/null || true
   exit 0
 fi
 
@@ -71,7 +73,7 @@ for HOST in "${PIS[@]}"; do
 done
 
 # macOS notification + beep for successful deploy
-osascript -e 'display notification "Deploy complete and latest snapshot saved to pi_backup_latest." with title "Biofeedback Deploy"' 2>/dev/null || true
+osascript -e 'display notification "Deploy complete and synced to Pis." with title "Biofeedback Deploy"' 2>/dev/null || true
 osascript -e 'beep 2' 2>/dev/null || true
 
 echo ">>> Deploy complete."
