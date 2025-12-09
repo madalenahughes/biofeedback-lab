@@ -1,16 +1,21 @@
-# Ignore everything by default
-*
+# Virtual envs
+venv/
+.venv/
 
-# Keep git + core scripts
-!.gitignore
-!deploy.sh
-!flipper_menu.sh
+# Pi backups
+backups/
+pi_backup_*/
+pi_backup_latest/
 
-# Keep the backup script (but NOT backup contents)
-!backups/
-!backups/latest_backup.sh
+# Flipper logs / uploads
+flipper_uploads/
+*.csv
 
-# Keep only the code snapshot folder
-!code/
-!code/**
+# Test runs / scratch
+test_sessions/
+__pycache__/
 
+# Misc
+*.log
+*.pdf
+.DS_Store
